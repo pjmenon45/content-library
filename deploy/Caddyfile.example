@@ -1,0 +1,9 @@
+# Example Caddyfile. Caddy handles TLS certificate issuance/renewal
+# automatically via Let's Encrypt — no manual cert management needed.
+#
+# Install Caddy, put this at /etc/caddy/Caddyfile (with your real domain),
+# then: sudo systemctl reload caddy
+
+your-domain.example {
+    reverse_proxy localhost:3000
+}

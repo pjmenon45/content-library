@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Content Library</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-name" href="/">Content Library</a>
+    <nav class="primary-nav" aria-label="Main">
+      <ul>
+        <li><a href="/" aria-current="page">Browse All</a></li>
+        <li><a href="/admin.html">Add Content</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+  <h1 class="page-title">Content Library</h1>
+
+  <form class="filters" id="filter-form">
+    <fieldset>
+      <legend>Category</legend>
+      <div class="radio-group">
+        <label><input type="radio" name="category" value="all" checked> Show All</label>
+        <label><input type="radio" name="category" value="article"> Article</label>
+        <label><input type="radio" name="category" value="ebook"> eBook</label>
+        <label><input type="radio" name="category" value="video"> Video</label>
+        <label><input type="radio" name="category" value="webinar"> Webinar</label>
+      </div>
+    </fieldset>
+
+    <div>
+      <label class="field-label" for="topic">Topic</label>
+      <select id="topic" name="topic">
+        <option value="all" selected>All topics</option>
+        <option value="ai">Artificial Intelligence</option>
+        <option value="cs">Computer Science &amp; Security</option>
+        <option value="energy">Energy &amp; Sustainability</option>
+        <option value="health">Health &amp; Medicine</option>
+        <option value="innovation">Innovation &amp; Entrepreneurship</option>
+        <option value="leadership">Leadership &amp; Business</option>
+      </select>
+    </div>
+  </form>
+
+  <section aria-label="Results">
+    <ul class="card-grid" id="card-grid"></ul>
+    <p class="empty-state" id="empty-state" hidden>No content matches these filters yet.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p>&copy; 2026 Content Library.</p>
+    <p><a href="/admin.html">Add content</a></p>
+  </div>
+</footer>
+
+<script src="gallery.js"></script>
+
+</body>
+</html>

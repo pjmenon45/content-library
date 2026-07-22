@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Content — Content Library</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-name" href="/">Content Library</a>
+    <nav class="primary-nav" aria-label="Main">
+      <ul>
+        <li><a href="/">Browse All</a></li>
+        <li><a href="/admin.html" aria-current="page">Add Content</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main-content">
+  <h1 class="page-title">Add Content</h1>
+
+  <form class="admin-form" id="add-form">
+    <label>
+      Title
+      <input type="text" name="title" required>
+    </label>
+
+    <label>
+      Description
+      <textarea name="description" required></textarea>
+    </label>
+
+    <label>
+      Category
+      <select name="category" required>
+        <option value="">Select a category</option>
+        <option value="article">Article</option>
+        <option value="ebook">eBook</option>
+        <option value="video">Video</option>
+        <option value="webinar">Webinar</option>
+      </select>
+    </label>
+
+    <label>
+      Topic
+      <select name="topic" required>
+        <option value="">Select a topic</option>
+        <option value="ai">Artificial Intelligence</option>
+        <option value="cs">Computer Science &amp; Security</option>
+        <option value="energy">Energy &amp; Sustainability</option>
+        <option value="health">Health &amp; Medicine</option>
+        <option value="innovation">Innovation &amp; Entrepreneurship</option>
+        <option value="leadership">Leadership &amp; Business</option>
+      </select>
+    </label>
+
+    <label>
+      YouTube URL
+      <input type="url" name="youtube_url" placeholder="https://www.youtube.com/watch?v=..." required>
+    </label>
+
+    <button type="submit" class="btn">Add to library</button>
+    <p class="form-status" id="form-status"></p>
+  </form>
+
+  <h2 style="margin-top:2.5rem; font-size:1.1rem;">Traffic</h2>
+  <div id="stats-panel" style="margin-top:0.75rem; font-size:0.9rem; color: var(--text-muted);">Loading…</div>
+
+  <h2 style="margin-top:2.5rem; font-size:1.1rem;">Existing entries</h2>
+  <ul class="card-grid" id="existing-list" style="margin-top:1rem;"></ul>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <p>&copy; 2026 Content Library.</p>
+  </div>
+</footer>
+
+<script src="admin.js"></script>
+
+</body>
+</html>
