@@ -1,0 +1,61 @@
+<style>
+/* ---------- 1️⃣  Scroll container ---------- */
+.course-item-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;            /* Firefox */
+    -ms-overflow-style: none;         /* IE 10+ */
+}
+.course-item-container::-webkit-scrollbar { display: none; }
+
+/* ---------- 2️⃣  Cards ---------- */
+.course-item {
+    flex: 0 0 auto;
+    width: 30%;               /* ~3 cards on a wide screen */
+    min-width: 250px;
+    background:#f9f9f9;
+    border-radius:8px;
+    text-align:center;
+    scroll-snap-align:start;
+    transition:transform .3s ease;
+}
+.course-item:hover { transform:scale(1.05); }
+.course-item img {
+    width:100%;
+    border-top-left-radius:8px;
+    border-top-right-radius:8px;
+}
+.course-item h3 { margin:10px 0 5px; font-size:1.5rem; }
+.course-item a {
+    display:inline-block;
+    margin:10px 0 15px;
+    background:#2c95db;
+    color:#fff;
+    padding:8px 16px;
+    text-decoration:none;
+    border-radius:6px;
+    transition:background .3s;
+}
+.course-item a:hover { background:#1d7fae; }
+
+/* ---------- 3️⃣  Dots ---------- */
+.carousel-indicators {
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:6px;
+    margin-top:20px;
+    padding:0;
+}
+.carousel-indicators li {
+    width:12px; height:12px;
+    border-radius:50%;
+    background:#ddd;
+    cursor:pointer;
+}
+.carousel-indicators li.active { background:#2c95db; }
+</style>
