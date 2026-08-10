@@ -75,7 +75,8 @@ app.use(helmet({
   contentSecurityPolicy: {
     useDefaults: true,
     directives: {
-      upgradeInsecureRequests: httpsEnabled ? undefined : null
+      upgradeInsecureRequests: httpsEnabled ? undefined : null,
+      "img-src": ["'self'", "data:", "https://picsum.photos", "https://*.picsum.photos"]
     }
   }
 }));
