@@ -59,8 +59,8 @@ function extractYouTubeId(input) {
   return null;
 }
 
-const ALLOWED_CATEGORIES = ['article', 'ebook', 'video', 'webinar'];
-const ALLOWED_TOPICS = ['ai', 'cs', 'energy', 'health', 'innovation', 'leadership'];
+const ALLOWED_CATEGORIES = ['article', 'newsletter', 'video', 'webinar'];
+const ALLOWED_TOPICS = ['Basic', 'Intermediate', 'Advanced', 'How To'];
 
 // --- Global middleware ----------------------------------------------------
 // Controlled by HTTPS_ENABLED in .env. Leave it "false" while running on
