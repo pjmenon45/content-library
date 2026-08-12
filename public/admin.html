@@ -41,7 +41,7 @@
       <select name="category" required>
         <option value="">Select a category</option>
         <option value="article">Article</option>
-        <option value="ebook">eBook</option>
+        <option value="Newsletter">Newsletter</option>
         <option value="video">Video</option>
         <option value="webinar">Webinar</option>
       </select>
@@ -49,14 +49,12 @@
 
     <label>
       Topic
-      <select name="topic" required>
-        <option value="">Select a topic</option>
-        <option value="ai">Artificial Intelligence</option>
-        <option value="cs">Computer Science &amp; Security</option>
-        <option value="energy">Energy &amp; Sustainability</option>
-        <option value="health">Health &amp; Medicine</option>
-        <option value="innovation">Innovation &amp; Entrepreneurship</option>
-        <option value="leadership">Leadership &amp; Business</option>
+      <select id="topic" name="topic">
+        <option value="all" selected>All topics</option>
+        <option value="Basic">Basics</option>
+        <option value="Intermediate">Intermediate </option>
+        <option value="Advanced">Advanced</option>
+        <option value="How To">How To</option>
       </select>
     </label>
 
